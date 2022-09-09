@@ -35,7 +35,8 @@ it('sends an e-mail via the Sparkpost Transmissions API', function () {
             ['name' => 'BCC A', 'email' => 'bcc-a@example.com'],
             ['name' => 'BCC B', 'email' => 'bcc-b@example.com'],
         ])
-        ->send(new class ([$attachmentA, $attachmentB]) extends Mailable {
+        ->send(new class([$attachmentA, $attachmentB]) extends Mailable
+        {
             public function __construct(private array $attachmentsToSend)
             {
             }
@@ -106,7 +107,7 @@ it('allows customizing the request body', function () {
         'options' => [
             'click_tracking' => false,
         ],
-        'description' => 'Test'
+        'description' => 'Test',
     ]));
 
     sendSimpleEmail();
@@ -142,7 +143,8 @@ function sendSimpleEmail(): SentMessage
 {
     return Mail::mailer('sparkpost')
         ->to([['name' => 'Recipient', 'email' => 'recipient@example.com']])
-        ->send(new class extends Mailable {
+        ->send(new class extends Mailable
+        {
             public function build()
             {
                 return $this->html('HTML content')->text(new HtmlString('Text content'));
