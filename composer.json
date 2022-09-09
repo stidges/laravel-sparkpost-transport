@@ -1,0 +1,60 @@
+{
+    "name": "stidges/laravel-sparkpost-transport",
+    "description": "Sparkpost transport for Laravel 9.x",
+    "keywords": [
+        "laravel",
+        "sparkpost",
+        "mail"
+    ],
+    "homepage": "https://github.com/stidges/laravel-sparkpost-transport",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stidges",
+            "email": "info@stidges.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.5",
+        "illuminate/contracts": "^9.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Stidges\\SparkpostTransport\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stidges\\SparkpostTransport\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Stidges\\SparkpostTransport\\SparkpostTransportServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
