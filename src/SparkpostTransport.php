@@ -14,39 +14,27 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Guzzle client instance.
-     *
-     * @var \GuzzleHttp\ClientInterface
      */
     protected ClientInterface $client;
 
     /**
      * The SparkPost API key.
-     *
-     * @var string
      */
     protected string $key;
 
     /**
      * The SparkPost API domain.
-     *
-     * @var string
      */
     protected string $domain;
 
     /**
      * The SparkPost transmission options.
-     *
-     * @var array
      */
     protected array $options = [];
 
     /**
      * Create a new SparkPost transport instance.
      *
-     * @param  ClientInterface  $client
-     * @param  string  $key
-     * @param  string  $domain
-     * @param  array  $options
      * @return void
      */
     public function __construct(ClientInterface $client, string $key, string $domain, array $options = [])
@@ -83,9 +71,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Get all the addresses this message should be sent to.
-     *
-     * @param  \Symfony\Component\Mailer\Envelope  $envelope
-     * @return array
      */
     protected function getRecipients(Envelope $envelope): array
     {
@@ -106,8 +91,6 @@ class SparkpostTransport extends AbstractTransport
     /**
      * Get the transmission ID from the response.
      *
-     * @param  \GuzzleHttp\Psr7\Response  $response
-     * @return string
      *
      * @throws \JsonException
      */
@@ -120,8 +103,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Get the string representation of the transport.
-     *
-     * @return string
      */
     public function __toString(): string
     {
@@ -130,8 +111,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Get the API key being used by the transport.
-     *
-     * @return string
      */
     public function getKey(): string
     {
@@ -140,9 +119,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Set the API key being used by the transport.
-     *
-     * @param  string  $key
-     * @return string
      */
     public function setKey(string $key): string
     {
@@ -151,8 +127,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Get the API domain being used by the transport.
-     *
-     * @return string
      */
     public function getDomain(): string
     {
@@ -161,9 +135,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Set the API domain being used by the transport.
-     *
-     * @param  string  $domain
-     * @return string
      */
     public function setDomain(string $domain): string
     {
@@ -172,8 +143,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Get the SparkPost API endpoint.
-     *
-     * @return string
      */
     public function getEndpoint(): string
     {
@@ -182,8 +151,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Get the Guzzle client instance.
-     *
-     * @return \GuzzleHttp\ClientInterface
      */
     public function getClient(): ClientInterface
     {
@@ -192,8 +159,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Get the transmission options being used by the transport.
-     *
-     * @return array
      */
     public function getOptions(): array
     {
@@ -202,9 +167,6 @@ class SparkpostTransport extends AbstractTransport
 
     /**
      * Set the transmission options being used by the transport.
-     *
-     * @param  array  $options
-     * @return array
      */
     public function setOptions(array $options): array
     {
