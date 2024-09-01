@@ -19,8 +19,8 @@ it('sends an e-mail via the Sparkpost Transmissions API', function () {
         ], JSON_THROW_ON_ERROR)),
     ]);
     Mail::extend('sparkpost', fn () => new SparkPostTransport($client, 'secret_key', 'api.sparkpost.com'));
-    $attachmentA = (new FileFactory())->image('attachment-a.png', 100, 100);
-    $attachmentB = (new FileFactory())->image('attachment-b.png', 50, 50);
+    $attachmentA = (new FileFactory)->image('attachment-a.png', 100, 100);
+    $attachmentB = (new FileFactory)->image('attachment-b.png', 50, 50);
 
     $message = Mail::mailer('sparkpost')
         ->to([
@@ -37,9 +37,7 @@ it('sends an e-mail via the Sparkpost Transmissions API', function () {
         ])
         ->send(new class([$attachmentA, $attachmentB]) extends Mailable
         {
-            public function __construct(private array $attachmentsToSend)
-            {
-            }
+            public function __construct(private array $attachmentsToSend) {}
 
             public function build()
             {

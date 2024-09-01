@@ -91,13 +91,13 @@ class SparkpostTransport extends AbstractTransport
     /**
      * Get the transmission ID from the response.
      *
-     *
      * @throws \JsonException
      */
     protected function getTransmissionId(Response $response): string
     {
         return object_get(
-            json_decode($response->getBody()->getContents(), flags: JSON_THROW_ON_ERROR), 'results.id'
+            json_decode($response->getBody()->getContents(), flags: JSON_THROW_ON_ERROR),
+            'results.id'
         );
     }
 
