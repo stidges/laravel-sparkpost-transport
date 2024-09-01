@@ -1,13 +1,14 @@
-# Sparkpost transport for Laravel 10.x
+# Sparkpost transport for Laravel 11.x
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/stidges/laravel-sparkpost-transport.svg?style=flat-square)](https://packagist.org/packages/stidges/laravel-sparkpost-transport)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/stidges/laravel-sparkpost-transport/run-tests.yml?label=tests)](https://github.com/stidges/laravel-sparkpost-transport/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/stidges/laravel-sparkpost-transport/fix-php-code-style-issues.yml?label=code%20style)](https://github.com/stidges/laravel-sparkpost-transport/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/stidges/laravel-sparkpost-transport.svg?style=flat-square)](https://packagist.org/packages/stidges/laravel-sparkpost-transport)
 
-A Sparkpost transport for Laravel 10.x
+A Sparkpost transport for Laravel 11.x
 
 **Note:** use v1 of this package for Laravel 9.x support
+**Note:** use v2 of this package for Laravel 10.x support
 
 ## Installation
 
