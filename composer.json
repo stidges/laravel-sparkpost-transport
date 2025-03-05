@@ -1,6 +1,6 @@
 {
     "name": "stidges/laravel-sparkpost-transport",
-    "description": "Sparkpost transport for Laravel 11.x",
+    "description": "Sparkpost transport for Laravel",
     "keywords": [
         "laravel",
         "sparkpost",
